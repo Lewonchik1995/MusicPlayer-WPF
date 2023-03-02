@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "dgSpecHash": "Znv3M4/rMO+Uu0K4zyE5bp3WWJoFYbCBd7Jny5TCczDuczTjLPqSbYzIwMdATzwoEO83TD+0ezRUr0abHvVbkg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AlexeyProtsenko\\Desktop\\Основы алгоритмизации и программирования\\С#\\Music_player\\Music_player.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AlexeyProtsenko\\.nuget\\packages\\materialdesigncolors\\2.1.1\\materialdesigncolors.2.1.1.nupkg.sha512",
+    "C:\\Users\\AlexeyProtsenko\\.nuget\\packages\\materialdesignthemes\\4.7.1\\materialdesignthemes.4.7.1.nupkg.sha512",
+    "C:\\Users\\AlexeyProtsenko\\.nuget\\packages\\microsoft.windowsapicodepack.core\\1.1.0\\microsoft.windowsapicodepack.core.1.1.0.nupkg.sha512",
+    "C:\\Users\\AlexeyProtsenko\\.nuget\\packages\\microsoft.windowsapicodepack.shell\\1.1.0\\microsoft.windowsapicodepack.shell.1.1.0.nupkg.sha512",
+    "C:\\Users\\AlexeyProtsenko\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Microsoft.WindowsAPICodePack.Core 1.1.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Microsoft.WindowsAPICodePack.Core",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"Microsoft.WindowsAPICodePack.Shell 1.1.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "Microsoft.WindowsAPICodePack.Shell",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
