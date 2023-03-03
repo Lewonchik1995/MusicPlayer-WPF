@@ -30,11 +30,7 @@ namespace Music_player
             {
                 items = Directory.GetFiles(dialog.FileName).Where(x => x.EndsWith(".mp3") || x.EndsWith(".m4a") || x.EndsWith(".wav")).ToArray();
                 fullPaths = items.ToArray();
-                for (int i = 0; i < items.Length; i++)
-                {
-                    FileInfo file = new FileInfo(items[i]);
-                    items[i] = file.Name;
-                }
+                items = get_names(items).ToArray();
                 Music_list.ItemsSource = items;
                 mediaPlayer.Volume = 0.5;
                 Volume_slider.Value = mediaPlayer.Volume;
@@ -47,6 +43,16 @@ namespace Music_player
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
+        }
+
+        static string[] get_names(string[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                FileInfo file = new FileInfo(array[i]);
+                array[i] = file.Name;
+            }
+            return array;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -167,6 +173,8 @@ namespace Music_player
             }
         }
 
+
+
         private void Shuffle_button_Click(object sender, RoutedEventArgs e)
         {
             if (Shuffle_button_icon.Kind == PackIconKind.ShuffleVariant)
@@ -177,11 +185,7 @@ namespace Music_player
                 var rnd = new Random();
                 string[] shuffledToList = fullPaths.OrderBy(x => rnd.Next()).ToArray();
                 string[] shuffledFullPath = shuffledToList.ToArray();
-                for (int i = 0; i < shuffledToList.Length; i++)
-                {
-                    FileInfo file = new FileInfo(shuffledToList[i]);
-                    shuffledToList[i] = file.Name;
-                }
+                shuffledToList = get_names(shuffledToList).ToArray();
                 Music_list.ItemsSource = shuffledToList;
                 Music_list.SelectedIndex = 0;
                 mediaPlayer.Source = new Uri(shuffledFullPath[0]);
